@@ -1,6 +1,6 @@
 # Hjälp – ett steg i taget
 
-Öppna bara det steg ni arbetar med. Läs först frågan, prova en ändring och kör `python main.py`. Läs den tydligare ledtråden först om ni fortfarande sitter fast. Hints visar **vad ni ska kontrollera**, inte en färdig function.
+Öppna bara det steg ni arbetar med. Steg 1–9, 11 och 12 är kärnan; steg 10 är valfritt. Läs först frågan, prova en ändring och kör `python main.py`. Läs den tydligare ledtråden först om ni fortfarande sitter fast. Hints visar **vad ni ska kontrollera**, inte en färdig function.
 
 ## Steg 1 – observation
 
@@ -32,11 +32,17 @@
 
 **Mer hjälp:** Tänk i två delar: fråga `can_book_ticket(...)`; vid `False`, lämna functionen direkt. Först därefter får `tickets_left` och `has_ticket` ändras. Kontrollera ett lyckat fall och ett fall med 0 biljetter.
 
-## Steg 6 – can_enter_event()
+## Steg 6A – can_enter_event(): eventets regler
 
-**Första hint:** Vilka krav gäller eventet, och vilka gäller personen? Vilka tidigare validation functions kan återanvändas?
+**Första hint:** Vilka två frågor om eventet måste få rätt svar innan någon får gå in? Vilka keys läser ni?
 
-**Mer hjälp:** Gruppera öppet/inte cancelled för eventet och pass/ID/giltig age/tillräcklig age för attendee. Alla krav måste vara sanna. Prova age 17, 18 och -1 mot minimum 18 med ett giltigt pass och ID. Functionen ska bara läsa state.
+**Mer hjälp:** Läs `is_event_open` och `is_cancelled`. Ett cancelled event är inte ett giltigt event att gå in på, så använd `not` för den ena regeln. Ge varje del ett eget bool-namn. Prova stängt och cancelled event på nya data, ett i taget. Funktionen ska bara läsa state.
+
+## Steg 6B – can_enter_event(): personens regler
+
+**Första hint:** Vilka fyra frågor gäller personen? Vilka tidigare validation functions kan återanvändas? Hur ser ni till att eventets regler från 6A finns kvar?
+
+**Mer hjälp:** Det är samma function som i 6A – bygg vidare, skriv ingen ny. Personens regler är pass (`has_entry_pass`), ID, giltig age (`is_valid_age`) och age minst `minimum_age`. Alla krav, både 6A och 6B, måste vara sanna. Prova age 17, 18 och -1 mot minimum 18 med giltigt pass och ID, och prova sedan ett cancelled event med en i övrigt giltig person. Funktionen ska bara läsa state.
 
 ## Steg 7 – can_check_in()
 
@@ -56,7 +62,9 @@
 
 **Mer hjälp:** Kontrollera `is_cancelled` **före** tilldelningarna. Vid ett nytt tillåtet anrop blir eventet både cancelled och stängt. Vid ett andra anrop ska inget ändras. Pröva booking med en person utan biljett mot det inställda eventet för att isolera rätt regel.
 
-## Steg 10 – meny
+## Steg 10 – Fördjupning – valfri meny
+
+Det här steget är valfritt. Hoppa gärna direkt till steg 11 och 12 om ni inte bygger en meny.
 
 **Första hint:** Vilka data måste skapas **en gång** före loopen för att booking och check-in ska dela samma state?
 
@@ -66,7 +74,7 @@
 
 **Första hint:** Har ni både ett giltigt fall och ett nekat fall för samma operation? Använder fallen egna dictionaries?
 
-**Mer hjälp:** `make_event()` och `make_attendee()` ger färska data. Ändra bara den key som behövs för ett scenario och skriv ner förväntat return-värde **före** anropet. Age exakt 18 och biljetter exakt 0 är bra gränser. Skriv ut state före och efter för att upptäcka mutation vid `False`.
+**Mer hjälp:** `make_event()` och `make_attendee()` ger färska data. Ändra bara den key som behövs för ett scenario och skriv ner förväntat return-värde **före** anropet. Age exakt 18 och biljetter exakt 0 är bra gränser. Skriv ut state före och efter för att upptäcka mutation vid `False`. Ni behöver ingen meny – vanliga function-anrop och `print()` längst ned i `main.py` räcker.
 
 ## Steg 12 – läsbarhet och granskning
 
