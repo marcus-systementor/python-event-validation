@@ -7,11 +7,11 @@ validation function → får detta göras?
 operation function  → kontrollera först, ändra sedan state
 ```
 
-Det här är en heldagslabb i grupp för **Grundläggande programmering i Python, dag 14**. Den tränar procedurell Python med `dict`, variables, functions, `if`, `return`, `and`, `or`, `not`, enkel `while`, `input()` och `print()`. Kärnan är steg 1–9, 11 och 12; steg 10 (meny) är valfri fördjupning. Ni behöver inga classes, filer, paket eller automatiserade test. Vi utgår från att de givna värdena har rätt Python-typ; uppgiften gäller **verksamhetsregler**, inte exception handling.
+Det här är en labb i grupp för **Grundläggande programmering i Python, dag 14**. Den tränar procedurell Python med `dict`, variables, functions, `if`, `return`, `and`, `or`, `not`, enkel `while`, `input()` och `print()`. Kärnan är steg 1–9, 11 och 12; steg 10 (meny) är valfri fördjupning. Ni behöver inga classes, filer, paket eller automatiserade test. Vi utgår från att de givna värdena har rätt Python-typ; uppgiften gäller **verksamhetsregler**, inte exception handling.
 
 ## Kom igång och samarbeta
 
-Om läraren delar en publik GitHub-template skapar **en** person ett gemensamt, normalt **Private**, gruprepo från den och delar länken. De andra får åtkomst enligt lärarens instruktion och alla arbetar i **samma** gruprepo. Git är inte huvudmomentet: gör gärna en liten `commit` efter varje färdigt steg och turas om att skriva och granska. Lägg inte tid på ett avancerat branch-flöde här.
+Om läraren delar en publik GitHub-template skapar ni ett personligt, normalt **Private**, repo från den. Git är inte huvudmomentet: gör gärna en liten `commit` efter varje färdigt steg och turas om att skriva och granska.
 
 Öppna mappen med `README.md` i terminalen och kör `python main.py` (på Windows kan `py main.py` fungera; på vissa datorer `python3 main.py`). Inga paket ska installeras.
 
@@ -25,7 +25,7 @@ Om läraren delar en publik GitHub-template skapar **en** person ett gemensamt, 
 | [REFLECTION.md](REFLECTION.md) | Reflektionsfrågor att svara på när ni är klara. |
 | `facit/` | Lärarens lösning. Öppna bara när läraren ber er göra det. |
 
-Arbeta så här i varje steg: läs regeln tillsammans, bestäm ett `True`-fall och ett `False`-fall, låt en person skriva den lilla ändringen, låt en annan granska, kör och förklara resultatet. Byt gärna vem som skriver kod mellan stegen. Om ni behöver pausa: spara ert senaste **fungerande** steg.
+Arbeta så här i varje steg: läs regeln tillsammans, bestäm ett `True`-fall och ett `False`-fall, skriv ändringen och kontrollera om ni får det förväntade resultatet. Om ni behöver pausa: spara ert senaste **fungerande** steg.
 
 **Tempo:** Kärnarbetet är steg 1–9, 11 och 12. Som riktmärke kan ni göra steg 1–5 först, steg 6–9 därefter och steg 11–12 sist, med pauser och tid för gemensam felsökning. Steg 10 (meny) är **valfri fördjupning** som ni gör om tiden räcker.
 
